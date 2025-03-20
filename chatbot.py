@@ -63,13 +63,3 @@ def home():
 async def cadastrarPergunta(nova: NovaPergunta):
     colecao.insert_one(nova.dict())
     return {"mensagem": "Pergunta cadastrada com sucesso."}
-
-'''
-dependencias (roda cada linha de cada vez, qualquer coisa cria uma venv se der algum erro):
-pip install fastapi uvicorn nltk spacy pymongo
-python -m pip install --upgrade pip
-python -m spacy download pt_core_news_sm
-
-codigo pra rodar: 
-uvicorn chatbot_mongodb:app --reload
-'''
