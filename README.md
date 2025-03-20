@@ -1,5 +1,5 @@
-## Projeto Integrador IV
-# Dependências
+# Projeto Integrador IV
+## Dependências
 
 Guia de instalação:
 
