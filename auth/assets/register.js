@@ -1,35 +1,13 @@
-const user = document.querySelector("#user");
-const email = document.querySelector("#email");
-const pwd = document.querySelector("#password");
+submitButton.addEventListener("click", async event => {
+  event.preventDefault(); // Previne o envio padrão do formulário
 
-const submitButton = document.querySelector("#submit");
-
-function validInput(user, email, pwd){
-  if(user.length <= 3){
-    alert("Nome de usuário deve ter mais de 3 caracteres");
-    return;
-  }
-  if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/.test(email)){
-    alert("Email inválido");
-    return;
-  }
-  
-  if(pwd.length <= 3){
-    alert("Senha deve ter mais de 3 caracteres");
-    return;
-  }
-
-  return true;
-}
-
-submitButton.addEventListener("click", async _ =>{
   const data = {
     username: user.value,
     email: email.value,
     password: pwd.value
   };
 
-  if(!validInput(user.value, email.value, pwd.value)){
+  if (!validInput(user.value, email.value, pwd.value)) {
     return;
   }
 
@@ -42,7 +20,28 @@ submitButton.addEventListener("click", async _ =>{
   });
   const resData = await res.json();
 
-  if(resData.ok){
+  if (resData.ok) {
     return location.replace("/home");
+  } else {
+    alert(resData.message || "Erro ao registrar. Tente novamente.");
   }
-})
+  function validInput(user, email, pwd) {
+    if (user.length <= 3) {
+      alert("Nome de usuário deve ter mais de 3 caracteres");
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("E-mail inválido");
+      return false;
+    }
+    if (pwd.length <= 3) {
+      alert("Senha deve ter mais de 3 caracteres");
+      return false;
+    }
+    return true;
+  }
+  if (!resData.ok) {
+    alert(resData.message || "Erro ao registrar. Tente novamente.");
+    return;
+  }
+});

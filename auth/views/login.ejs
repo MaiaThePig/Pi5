@@ -1,34 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <title>SouDoido</title>
-  <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - FormatBot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a; /* Preto */
+      color: #d4b3ff; /* Roxo claro */
+      text-align: center;
+      padding: 20px;
+    }
+    .form {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #3b007f; /* Roxo escuro */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .form h1 {
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .form input[type="submit"] {
+      background-color: #d4b3ff; /* Roxo claro */
+      color: #1a1a1a; /* Preto */
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form input[type="submit"]:hover {
+      background-color: #ffffff;
+    }
+    .form a {
+      color: #d4b3ff;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    .form a:hover {
+      text-decoration: underline;
+    }    
+  </style>
 </head>
-
 <body>
-    <div class="margem"></div>
   <main>
     <div class="form">
-      <div class="center">
-        <h1 class="logo">Sou<span>Doido</span></h1> </div>
-        <div class="imagem center">
-        <img
-      <div class="auth-input">
-        <label for="email" <b>Email</b> </label>
-        <input type="text" placeholder="Email" id="email" required><br>
-        <label for=senha <b>Senha</b> </label>
-        <input type="password" placeholder="Senha" id="password" required><br>
-        <a href="#">
-          <input type="submit" placeholder="Confirmar" id="submit" required><br>
-        </a>
-        <a href="/recover">Esqueci minha Senha</a><p>
-        <a href="/register">Crie sua conta</a></p>
-      </div>
+      <h1>Login</h1>
+      <form action="/login" method="POST">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+        
+        <input type="submit" value="Entrar">
+      </form>
+      <a href="#" onclick="forgotPassword()">Esqueci minha senha</a>
+      <a href="/register">Crie sua conta</a>
     </div>
   </main>
+  
+
+  <script src="/js/script.js"></script>
+
+  <script>
+    function forgotPassword() {
+      alert("Por favor, entre em contato com o suporte da empresa Format para recuperar sua senha.");
+    }
+  </script>
 </body>
-
-<script src="/assets/login.js"></script>
-
 </html>
