@@ -2,21 +2,18 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    
+    <link rel="icon" href="LogoFormat.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro - FormatBot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Login - FormatBot</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1a1a1a; /* Preto */
-      color: #d4b3ff; /* Roxo claro */
-      text-align: center;
-      padding: 20px;
-    }
     .form {
       max-width: 400px;
       margin: 50px auto;
-      background-color: #3b007f; /* Roxo escuro */
+      background-color: black;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -40,7 +37,7 @@
       font-size: 1rem;
     }
     .form input[type="submit"] {
-      background-color: #d4b3ff; /* Roxo claro */
+      background-color: #ffffff; /* Roxo claro */
       color: #1a1a1a; /* Preto */
       font-weight: bold;
       cursor: pointer;
@@ -49,25 +46,81 @@
     .form input[type="submit"]:hover {
       background-color: #ffffff;
     }
+    .form a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    .form a:hover {
+      text-decoration: underline;
+    }
+    .form-wrapper{
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
-  <main>
+  <%- include('./partials/navbar'); %>
+
+  <div class="form-wrapper">
     <div class="form">
-      <h1>Cadastro</h1>
-      <form action="/register" method="POST">
-        <label for="username">Nome de Usuário</label>
-        <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
-        
+      <h1>Registrar-se</h1>
+      <form id="registerForm">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+  
+        <label for="username">Nome de Usuário</label>
+        <input type="text" name="username" placeholder="Username" required>
         
         <label for="password">Senha</label>
         <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
         
-        <input type="submit" value="Confirmar">
+        <input type="submit" value="Criar">
       </form>
+      <a href="/login">Já tenho uma conta</a>
     </div>
-  </main>
+  </div>
+  
+  
+  <script>
+  document.getElementById('registerForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const username = document.querySelector('input[name="username"]').value;
+    const password = document.getElementById('password').value;
+
+    const payload = { email, username, password };
+
+    try {
+      const res = await fetch('/api/user/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        credentials: "include",
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        alert('Cadastro realizado com sucesso!');
+        window.location.href = '/login';
+      } else {
+        const data = await res.json();
+        alert('Erro: ' + (data.message || 'Falha ao registrar'));
+      }
+    } catch (err) {
+      alert('Erro de conexão: ' + err.message);
+    }
+  });
+
+  function forgotPassword() {
+    alert("Por favor, entre em contato com o suporte da empresa Format para recuperar sua senha.");
+  }
+  </script>
+    <%- include('./partials/footer'); %>
 </body>
 </html>

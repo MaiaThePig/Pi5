@@ -1,0 +1,50 @@
+<div class="menu_bar flex justify-between items-center">
+    <div class="nav-logo">
+        <img src="logo-branca.png" alt="LogoFormat">
+    </div>
+
+    <ul class="flex space-x-4">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">A Format <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown_menu">
+                <ul>
+                    <li>
+                        <a href="#">Serviços <i class="fas fa-caret-right"></i></a>
+                        <div class="dropdown_menu-1">
+                            <ul>
+                                <li><a href="#">Manutenção de Computadores</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Equipe</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+
+    <!-- Link de logout -->
+    <a id="logoutBtn" href="#" class="text-red-600 hover:text-red-800">
+        Desconectar
+    </a>
+</div>
+
+<script>
+    document.getElementById("logoutBtn").addEventListener("click", (event) => {
+        event.preventDefault(); // Evita o comportamento padrão de navegação
+
+        fetch("/api/user/logout", {
+            method: "POST",
+            credentials: "include" // Se estiver usando cookies para autenticação
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = "/"; // Redireciona para a página inicial após logout
+            } else {
+                alert("Nenhuma conta conectada");
+            }
+        });
+    });
+</script>
