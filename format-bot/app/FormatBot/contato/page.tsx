@@ -91,8 +91,8 @@ export default function ContatoPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-white">Endereço</h3>
-                    <p className="text-gray-400">Rua General Osório, 189, Sala 03</p>
-                    <p className="text-gray-400">Minas Gerais, Patos de Minas - 38700-114</p>
+                    <p className="text-gray-400">Rua General Osório, 189 - sala 03, Centro</p>
+                    <p className="text-gray-400">Patos de Minas - MG, 38700-114</p>
                   </div>
                 </div>
 
@@ -132,7 +132,7 @@ export default function ContatoPage() {
                 <div className="pt-6 border-t border-zinc-700">
                   <h3 className="font-medium text-white mb-4">Nos siga nas redes sociais</h3>
                   <div className="flex space-x-4">
-                    <a href="#" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
+                    <a href="https://www.facebook.com/formatsolucoes" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
                       <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                           fillRule="evenodd"
@@ -140,13 +140,8 @@ export default function ContatoPage() {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </a>
-                    <a href="#" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
-                      <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                      </svg>
-                    </a>
-                    <a href="#" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
+                    </a> 
+                    <a href="https://www.instagram.com/formatsolucoes/" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
                       <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                           fillRule="evenodd"
@@ -155,7 +150,7 @@ export default function ContatoPage() {
                         />
                       </svg>
                     </a>
-                    <a href="#" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
+                    <a href="https://www.youtube.com/@formatsolucoes1979" className="bg-zinc-700 p-2 rounded-full hover:bg-purple-600 transition-colors">
                       <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
                           fillRule="evenodd"
@@ -447,7 +442,7 @@ export default function ContatoPage() {
           <h2 className="text-2xl font-bold text-white mb-6">Nossa Localização</h2>
           <div className="rounded-lg overflow-hidden h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976951333286!2d-46.65390548502264!3d-23.563273284682785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1620919149867!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.224328063881!2d-46.5161775!3d-18.589037699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae61c2bbe94ca7%3A0x31c9094ca510d883!2zRm9ybWF0IFNvbHXDp8O1ZXM!5e1!3m2!1spt-BR!2sbr!4v1748646385177!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}

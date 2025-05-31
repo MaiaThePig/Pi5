@@ -44,7 +44,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/FormatBot" className="flex items-center space-x-2">
-          <img src="/logoFormat.png" alt="Format Soluções Logo" className="h-8 w-auto" />
+          <img src="/FormatBot/images/logo.png" alt="Format Soluções Logo" className="h-8 w-auto" />
         </Link>
 
         {isMobile ? (
