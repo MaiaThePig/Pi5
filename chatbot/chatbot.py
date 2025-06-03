@@ -4,7 +4,7 @@ import spacy
 import nltk
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://formatBot:c0d4cf14f7a10c35c2aa562b8817ffae71f5e4976d416fb6fcb9fb69a79e88c8@formatbot.bmsbb.mongodb.net/chatbot")
+client = MongoClient("")
 db = client["chatbot_db"]
 colecao = db["perguntas"]
 
