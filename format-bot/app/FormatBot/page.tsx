@@ -43,10 +43,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Seção com imagem média e texto */}
-      <section className="py-20 bg-zinc-800">
+      {/* Seção com imagem média e texto - espaçamentos compactados */}
+      <section className="py-12 bg-zinc-800">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="lg:w-1/2">
               <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
@@ -58,10 +58,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Tecnologia que <span className="text-purple-500">impulsiona</span> seu crescimento
               </h2>
-              <p className="text-gray-300 text-lg mb-8">
+              <p className="text-gray-300 text-lg mb-6">
                 A Format Soluções oferece serviços completos de TI para empresas de todos os portes. Nossa equipe de
                 especialistas está pronta para ajudar sua empresa a alcançar todo o seu potencial através da tecnologia.
               </p>
@@ -74,10 +74,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Container com 5 tópicos expansíveis */}
-      <section className="py-10 bg-zinc-900">
+      {/* Container com 5 tópicos expansíveis - altura maior como versão 18 */}
+      <section className="py-6 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
             Nossas <span className="text-purple-500">Especialidades</span>
           </h2>
 
@@ -85,10 +85,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Carrossel de ícones de tecnologia */}
-      <section className="py-20 bg-zinc-800">
+      {/* Carrossel de ícones de tecnologia - espaçamentos compactados */}
+      <section className="py-12 bg-zinc-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
             Tecnologias que <span className="text-purple-500">Dominamos</span>
           </h2>
 
@@ -109,35 +109,35 @@ function ExpandableTopicsVertical() {
       title: "Desenvolvimento de Software",
       description:
         "Criamos soluções personalizadas para seu negócio, desde aplicativos web até sistemas completos de gestão empresarial.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=1600&width=1600",
     },
     {
       icon: Server,
       title: "Infraestrutura de TI",
       description:
         "Projetamos e implementamos infraestruturas robustas e escaláveis para suportar as operações da sua empresa.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=1600&width=1600",
     },
     {
       icon: Database,
       title: "Gestão de Dados",
       description:
         "Soluções para armazenamento, processamento e análise de dados, transformando informações em insights valiosos.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=1600&width=1600",
     },
     {
       icon: Shield,
       title: "Segurança Digital",
       description:
         "Protegemos seu negócio contra ameaças cibernéticas com soluções avançadas de segurança da informação.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=1600&width=1600",
     },
     {
       icon: Smartphone,
       title: "Mobilidade Empresarial",
       description:
         "Estratégias e ferramentas para garantir produtividade e segurança em ambientes de trabalho móveis e remotos.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=1600&width=1600",
     },
   ]
 
@@ -154,32 +154,52 @@ function ExpandableTopicsVertical() {
         >
           {/* Conteúdo compacto (visível quando não expandido) */}
           <div
-            className={`h-full flex flex-col items-center justify-center transition-opacity duration-300 
+            className={`h-full flex flex-col items-center transition-opacity duration-300 
               ${activeIndex === index ? "opacity-0" : "opacity-100"}
             `}
+            style={{ paddingTop: "5%" }}
           >
+            {/* Ícone mantido na posição original: 5% do topo */}
             <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-4">
               <topic.icon className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white transform rotate-90 whitespace-nowrap">{topic.title}</h3>
+            <div className="flex-grow flex items-center">
+              <h3 className="text-xl font-semibold text-white transform rotate-90 whitespace-nowrap">{topic.title}</h3>
+            </div>
           </div>
 
           {/* Conteúdo expandido (visível quando expandido) */}
           <div
             className={`absolute inset-0 p-6 transition-opacity duration-300 
-              ${activeIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"}
-            `}
+            ${activeIndex === index ? "opacity-100" : "opacity-0 pointer-events-none"}
+          `}
+            style={{ paddingTop: "4%" }}
           >
             <div className="h-full flex flex-col">
-              <div className="mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-4">
+              {/* Ícone + Título na mesma linha */}
+              <div className="flex items-center mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mr-4">
                   <topic.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{topic.title}</h3>
-                <p className="text-gray-300">{topic.description}</p>
+                <h3 className="text-2xl font-semibold text-white">{topic.title}</h3>
               </div>
-              <div className="flex-grow relative w-full rounded-lg overflow-hidden">
-                <Image src={topic.image || "/placeholder.svg"} alt={topic.title} fill className="object-cover" />
+
+              {/* Layout horizontal: Texto e Imagem alinhados */}
+              <div className="flex-grow flex items-start">
+                {/* Texto à esquerda */}
+                <div className="w-1/2 pr-4 flex items-center h-full">
+                  <p className="text-gray-300 text-lg leading-relaxed">{topic.description}</p>
+                </div>
+
+                {/* Imagem quadrada à direita (1600x1600) */}
+                <div className="w-1/2 h-full flex items-center justify-center">
+                  <div
+                    className="w-full aspect-square relative rounded-lg overflow-hidden"
+                    style={{ maxHeight: "85%" }}
+                  >
+                    <Image src={topic.image || "/placeholder.svg"} alt={topic.title} fill className="object-cover" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

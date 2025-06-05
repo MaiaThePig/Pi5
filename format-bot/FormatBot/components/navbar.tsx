@@ -13,42 +13,33 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
-import { useIsMobile } from "../hooks/use-is-mobile"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 export function Navbar() {
-  const isMobile = useIsMobile();
-  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile()
+  const [isOpen, setIsOpen] = useState(false)
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => setIsOpen(false)
 
   const navItems = [
     { name: "Home", href: "/FormatBot" },
     {
       name: "Serviços",
       href: "/FormatBot/servicos",
-      submenu: [
-        { name: "Manutenção de Computadores", href: "/FormatBot/servicos/manutencao" },
-        { name: "Redes e Infraestrutura", href: "/FormatBot/servicos/redes" },
-        { name: "Desenvolvimento de Software", href: "/FormatBot/servicos/desenvolvimento" },
-        { name: "Consultoria em TI", href: "/FormatBot/servicos/consultoria" },
-      ],
+      submenu: [{ name: "Manutenção de Computadores", href: "/FormatBot/servicos/manutencao" }],
     },
     { name: "Cursos", href: "/FormatBot/cursos" },
     { name: "Equipe", href: "/FormatBot/equipe" },
     { name: "Sobre", href: "/FormatBot/sobre" },
     { name: "Blog", href: "/FormatBot/blog" },
     { name: "Contato", href: "/FormatBot/contato" },
-  ];
+  ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/FormatBot" className="flex items-center space-x-2">
-          <img
-            src="/placeholder.svg?height=40&width=40"
-            alt="Format Soluções Logo"
-            className="h-8 w-auto"
-          />
+          <img src="/placeholder.svg?height=40&width=40" alt="Format Soluções Logo" className="h-8 w-auto" />
           <span className="font-bold text-xl">Format Soluções</span>
         </Link>
 
@@ -92,11 +83,11 @@ export function Navbar() {
           </Sheet>
         ) : (
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="space-x-4">
               {navItems.map((item) =>
                 item.submenu ? (
                   <NavigationMenuItem key={item.name}>
-                    <NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="px-4 py-2">{item.name}</NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-3 p-4">
                         {item.submenu.map((subItem) => (
@@ -106,6 +97,28 @@ export function Navbar() {
                                 href={subItem.href}
                                 className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               >
-                                <div className="text-sm font-medium leading-none">
-                                  {subItem.name}
-                                \
+                                <div className="text-sm font-medium leading-none">{subItem.name}</div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                ) : (
+                  <NavigationMenuItem key={item.name}>
+                    <Link href={item.href} legacyBehavior passHref>
+                      <NavigationMenuLink className="font-medium px-4 py-2 hover:text-primary transition-colors">
+                        {item.name}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                ),
+              )}
+            </NavigationMenuList>
+          </NavigationMenu>
+        )}
+      </div>
+    </header>
+  )
+}
