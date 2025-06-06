@@ -9,7 +9,7 @@ const teamMembers = [
     name: "Ana Silva",
     role: "CEO & Fundadora",
     department: "Diretoria",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/AnaSilva.png",
     bio: "Com mais de 15 anos de experiência em tecnologia, Ana lidera a Format Soluções com visão inovadora e foco em resultados. Formada em Ciência da Computação com MBA em Gestão de Negócios.",
     skills: ["Liderança", "Estratégia", "Inovação", "Gestão de Negócios"],
     social: {
@@ -23,7 +23,7 @@ const teamMembers = [
     name: "Carlos Mendes",
     role: "CTO",
     department: "Diretoria",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/CarlosMendes.png",
     bio: "Especialista em IA e desenvolvimento de software, Carlos supervisiona todas as soluções tecnológicas da empresa. Com PhD em Inteligência Artificial, ele lidera a equipe de desenvolvimento.",
     skills: ["Inteligência Artificial", "Arquitetura de Software", "Cloud Computing", "Inovação Tecnológica"],
     social: {
@@ -37,7 +37,7 @@ const teamMembers = [
     name: "Juliana Costa",
     role: "Diretora de Operações",
     department: "Diretoria",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/Juliana.png",
     bio: "Juliana garante que todos os projetos sejam entregues com qualidade e dentro do prazo. Com experiência em gestão de projetos e metodologias ágeis, ela coordena as equipes e processos.",
     skills: ["Gestão de Projetos", "Metodologias Ágeis", "Processos", "Liderança de Equipes"],
     social: {
@@ -51,7 +51,7 @@ const teamMembers = [
     name: "Rafael Oliveira",
     role: "Líder de Desenvolvimento",
     department: "Desenvolvimento",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/Rafael.png",
     bio: "Com vasta experiência em desenvolvimento web, Rafael lidera nossa equipe de programadores. Especialista em React, Node.js e arquiteturas modernas.",
     skills: ["React", "Node.js", "TypeScript", "Arquitetura de Software"],
     social: {
@@ -66,7 +66,7 @@ const teamMembers = [
     name: "Mariana Santos",
     role: "Especialista em UX/UI",
     department: "Design",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/Mariana.png",
     bio: "Mariana transforma conceitos em interfaces intuitivas e atraentes. Com formação em Design e especialização em Experiência do Usuário, ela cria designs que combinam estética e funcionalidade.",
     skills: ["UI Design", "UX Research", "Prototipagem", "Design Systems"],
     social: {
@@ -81,7 +81,7 @@ const teamMembers = [
     name: "Lucas Ferreira",
     role: "Especialista em IA",
     department: "Desenvolvimento",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/LucasFerreira.png",
     bio: "Lucas desenvolve algoritmos de inteligência artificial e machine learning para nossas soluções. Com mestrado em Ciência de Dados, ele transforma dados em insights valiosos.",
     skills: ["Machine Learning", "Python", "Data Science", "Deep Learning"],
     social: {
@@ -95,7 +95,7 @@ const teamMembers = [
     name: "Fernanda Lima",
     role: "Gerente de Projetos",
     department: "Operações",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/Fernanda.png",
     bio: "Fernanda coordena os projetos da Format Soluções, garantindo que sejam entregues no prazo e dentro do orçamento. Certificada em PMP e metodologias ágeis.",
     skills: ["Gestão de Projetos", "Scrum", "Kanban", "Liderança"],
     social: {
@@ -109,7 +109,7 @@ const teamMembers = [
     name: "Pedro Alves",
     role: "Especialista em Cloud",
     department: "Infraestrutura",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/FormatBot/images/Pedro.png",
     bio: "Pedro é responsável pelas soluções de infraestrutura em nuvem da Format Soluções. Certificado em AWS, Azure e Google Cloud, ele projeta arquiteturas escaláveis e seguras.",
     skills: ["AWS", "Azure", "Google Cloud", "DevOps", "Kubernetes"],
     social: {

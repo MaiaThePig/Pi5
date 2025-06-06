@@ -13,7 +13,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/placeholder.svg?height=1080&width=1920')",
+            backgroundImage: "url('/FormatBot/images/homeformat.jpg')",
             filter: "brightness(0.4)",
           }}
         />
@@ -123,21 +123,21 @@ function ExpandableTopicsVertical() {
       title: "Gestão de Dados",
       description:
         "Soluções para armazenamento, processamento e análise de dados, transformando informações em insights valiosos.",
-      image: "/placeholder.svg?height=1600&width=1600",
+      image: "/FormatBot/images/GestaodeDados.png",
     },
     {
       icon: Shield,
       title: "Segurança Digital",
       description:
         "Protegemos seu negócio contra ameaças cibernéticas com soluções avançadas de segurança da informação.",
-      image: "/placeholder.svg?height=1600&width=1600",
+      image: "/FormatBot/images/segDigital.png",
     },
     {
       icon: Smartphone,
       title: "Mobilidade Empresarial",
       description:
         "Estratégias e ferramentas para garantir produtividade e segurança em ambientes de trabalho móveis e remotos.",
-      image: "/placeholder.svg?height=1600&width=1600",
+      image: "/FormatBot/images/mobilidade.png",
     },
   ]
 

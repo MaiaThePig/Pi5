@@ -70,7 +70,7 @@ export default function ManutencaoPage() {
         </div>
         <div className="flex items-center justify-center">
           <img
-            src="/placeholder.svg?height=400&width=600"
+            src="/FormatBot/images/manutencao.jpg"
             alt="Técnico realizando manutenção em computador"
             className="rounded-lg shadow-lg max-w-full h-auto"
           />

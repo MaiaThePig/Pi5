@@ -94,7 +94,7 @@ export default function SobrePage() {
           </div>
           <div className="relative h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=1000&width=800"
+              src="/FormatBot/images/empresas.jpg"
               alt="Equipe Format Soluções"
               fill
               className="object-cover"
