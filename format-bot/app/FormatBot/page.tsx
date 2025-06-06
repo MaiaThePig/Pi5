@@ -50,7 +50,7 @@ export default function HomePage() {
             <div className="lg:w-1/2">
               <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=800&width=1200"
+                  src="/FormatBot/images/mediaHome.png"
                   alt="Soluções de TI"
                   fill
                   className="object-cover"
@@ -109,14 +109,14 @@ function ExpandableTopicsVertical() {
       title: "Desenvolvimento de Software",
       description:
         "Criamos soluções personalizadas para seu negócio, desde aplicativos web até sistemas completos de gestão empresarial.",
-      image: "/placeholder.svg?height=1600&width=1600",
+      image: "/FormatBot/images/devSoftware.png",
     },
     {
       icon: Server,
       title: "Infraestrutura de TI",
       description:
         "Projetamos e implementamos infraestruturas robustas e escaláveis para suportar as operações da sua empresa.",
-      image: "/placeholder.svg?height=1600&width=1600",
+      image: "/FormatBot/images/infra.png",
     },
     {
       icon: Database,
